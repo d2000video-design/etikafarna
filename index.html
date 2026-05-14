@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Etika Farma</title>
   <meta name="description" content="Etika Farma — tecnologia, ciência e evolução aplicadas à saúde." />
 
@@ -13,13 +14,9 @@
   <style>
     :root {
       --blue-dark: #061b55;
-      --blue-deep: #08245f;
       --blue-soft: #2f8cff;
-      --cyan: #16d4e4;
       --purple: #b64cff;
-      --text: #071d4e;
       --muted: #53647f;
-      --white: #ffffff;
       --border: rgba(8, 36, 95, 0.16);
     }
 
@@ -35,7 +32,7 @@
 
     body {
       font-family: "Inter", Arial, sans-serif;
-      color: var(--text);
+      color: var(--blue-dark);
       background: #f7fbff;
       overflow-x: hidden;
     }
@@ -61,12 +58,6 @@
       border-bottom: 1px solid rgba(6, 27, 85, 0.08);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
     .brand img {
       height: 58px;
       width: auto;
@@ -81,12 +72,10 @@
       font-weight: 700;
       letter-spacing: 0.035em;
       text-transform: uppercase;
-      color: var(--blue-dark);
     }
 
     .nav a {
       position: relative;
-      opacity: 0.95;
     }
 
     .nav a::after {
@@ -108,12 +97,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       height: 52px;
       padding: 0 26px;
       border: 1px solid rgba(8, 36, 95, 0.55);
       border-radius: 999px;
-      color: var(--blue-dark);
       font-weight: 800;
       font-size: 0.88rem;
       letter-spacing: 0.035em;
@@ -140,7 +127,6 @@
       background-image: url("assets/hero-etika.png");
       background-size: cover;
       background-position: center right;
-      opacity: 1;
       z-index: 0;
     }
 
@@ -162,51 +148,28 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 760px;
+      max-width: 620px;
       padding: 6vh 0 8vh 5.4vw;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 26px;
-      color: #7790b9;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.095em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 72px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--blue-soft), var(--purple));
-      border-radius: 999px;
-    }
-
     h1 {
-  font-size: clamp(2rem, 4vw, 4.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.055em;
-  font-weight: 800;
-  color: var(--blue-dark);
-  max-width: 620px;
-  padding-top: 12px;
-}
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      max-width: 620px;
+      padding-top: 12px;
     }
 
     .gradient-word {
-  background: linear-gradient(90deg, #168dff 0%, #5d78ff 45%, #c743e8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: -0.055em;
-  display: inline-block;
-  padding-right: 10px;
-  font-weight: 800;
-}
+      background: linear-gradient(90deg, #168dff 0%, #5d78ff 45%, #c743e8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding-right: 10px;
+      font-weight: 800;
+    }
 
     .accent-line {
       width: 76px;
@@ -217,8 +180,8 @@
     }
 
     .subtitle {
-      max-width: 620px;
-      font-size: clamp(1.05rem, 1.5vw, 1.45rem);
+      max-width: 540px;
+      font-size: clamp(1.05rem, 1.35vw, 1.25rem);
       line-height: 1.65;
       color: #52627f;
       font-weight: 500;
@@ -244,7 +207,7 @@
       font-weight: 800;
       letter-spacing: 0.035em;
       text-transform: uppercase;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      transition: transform .25s ease;
     }
 
     .btn-primary {
@@ -254,7 +217,6 @@
     }
 
     .btn-secondary {
-      color: var(--blue-dark);
       border: 1px solid rgba(8, 36, 95, 0.45);
       background: rgba(255, 255, 255, 0.58);
     }
@@ -273,7 +235,6 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      color: var(--blue-dark);
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.055em;
@@ -336,37 +297,98 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 70px;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 80px;
       align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
+      color: #7790b9;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.095em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 72px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-soft), var(--purple));
+      border-radius: 999px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      max-width: 680px;
+    }
+
+    .section-text {
+      margin-top: 28px;
+      max-width: 720px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--muted);
     }
 
     .about-text {
       margin-top: 34px;
       max-width: 620px;
-      font-size: 1.18rem;
-      line-height: 1.9;
+      font-size: 1.12rem;
+      line-height: 1.85;
     }
 
     .about-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
     }
 
     .about-card {
-      padding: 34px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.72);
+      padding: 38px 32px;
+      border-radius: 34px;
+      min-height: 300px;
+      background: rgba(255,255,255,0.78);
       border: 1px solid rgba(8, 36, 95, 0.08);
       backdrop-filter: blur(18px);
-      box-shadow: 0 18px 60px rgba(8, 36, 95, 0.06);
-      transition: transform .25s ease, border-color .25s ease;
+      box-shadow:
+        0 18px 60px rgba(8, 36, 95, 0.06),
+        inset 0 1px 0 rgba(255,255,255,0.65);
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
     }
 
     .about-card:hover {
       transform: translateY(-4px);
       border-color: rgba(47, 140, 255, 0.22);
+      box-shadow:
+        0 24px 70px rgba(8, 36, 95, 0.09),
+        inset 0 1px 0 rgba(255,255,255,0.75);
+    }
+
+    .icon-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(91,120,255,0.10), rgba(199,67,232,0.10));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 28px;
+      border: 1px solid rgba(91,120,255,0.12);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.7),
+        0 10px 30px rgba(91,120,255,0.08);
     }
 
     .card-label {
@@ -380,30 +402,15 @@
     }
 
     .about-card p {
-      font-size: 1.05rem;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.75;
       color: var(--blue-dark);
       font-weight: 600;
     }
 
-    .section-title {
-      font-size: clamp(2.2rem, 4vw, 4rem);
-      line-height: 1;
-      letter-spacing: -0.055em;
-      color: var(--blue-dark);
-      max-width: 760px;
-    }
-
-    .section-text {
-      margin-top: 28px;
-      max-width: 720px;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--muted);
-    }
-
     @media (max-width: 1120px) {
-      .nav, .header-cta {
+      .nav,
+      .header-cta {
         display: none;
       }
 
@@ -434,12 +441,13 @@
         min-height: calc(100vh - 82px);
         padding-left: 6vw;
         padding-right: 6vw;
-        max-width: 720px;
       }
-    }
 
-    @media (max-width: 980px) {
       .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-cards {
         grid-template-columns: 1fr;
       }
     }
@@ -452,7 +460,7 @@
 
       .hero::after {
         background:
-          linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 58%, rgba(255,255,255,0.45) 100%),
+          linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.9) 58%, rgba(255,255,255,0.55) 100%),
           linear-gradient(0deg, rgba(247,251,255,0.96) 0%, rgba(247,251,255,0.12) 34%, rgba(247,251,255,0) 100%);
       }
 
@@ -462,12 +470,11 @@
       }
 
       h1 {
-        font-size: clamp(2.55rem, 13vw, 4.4rem);
+        font-size: clamp(2.35rem, 11vw, 4rem);
       }
 
       .subtitle {
         font-size: 1rem;
-        line-height: 1.65;
       }
 
       .btn {
@@ -481,6 +488,7 @@
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Etika Farma">
@@ -505,11 +513,9 @@
   <main>
     <section id="home" class="hero">
       <div class="hero-content">
-        
-
         <h1>
-          Tecnologia,<br />
-          ciência <span class="gradient-word">e evolução</span><br />
+          Tecnologia,<br>
+          ciência e <span class="gradient-word">evolução</span><br>
           aplicadas à saúde.
         </h1>
 
@@ -537,33 +543,36 @@
           <div class="eyebrow">Sobre a Etika Farma</div>
 
           <h2 class="section-title">
-            Ciência, inovação e precisão aplicadas à evolução da saúde.
+            Uma estrutura ágil para uma nova etapa da saúde.
           </h2>
 
           <p class="section-text about-text">
-            A Etika Farma une desenvolvimento, distribuição e relacionamento médico em uma estrutura moderna, ágil e orientada pela evolução científica.
+            A Etika Farma atua no desenvolvimento, fabricação e distribuição de soluções em saúde, conectando produtos, relacionamento médico e educação continuada com presença estratégica no Brasil.
           </p>
         </div>
 
         <div class="about-cards">
           <div class="about-card">
+            <div class="icon-circle">🎯</div>
             <span class="card-label">Missão</span>
             <p>
-              Desenvolver soluções com eficiência, segurança e qualidade.
+              Levar soluções seguras e bem desenvolvidas à rotina de médicos e pacientes.
             </p>
           </div>
 
           <div class="about-card">
+            <div class="icon-circle">🔭</div>
             <span class="card-label">Visão</span>
             <p>
-              Construir uma presença de referência em inovação e relacionamento médico.
+              Ser reconhecida pela capacidade de unir inovação, qualidade e proximidade com o prescritor.
             </p>
           </div>
 
           <div class="about-card">
+            <div class="icon-circle">🤝</div>
             <span class="card-label">Valores</span>
             <p>
-              Ética. Precisão. Evolução. Transparência.
+              Ética. Clareza. Qualidade. Compromisso. Evolução.
             </p>
           </div>
         </div>
