@@ -764,7 +764,90 @@
         grid-template-columns: 1fr;
       }
     }
+.contact-section {
 
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(47,140,255,0.08),
+      transparent 22%
+    ),
+
+    linear-gradient(
+      180deg,
+      #f8fbff 0%,
+      #ffffff 100%
+    );
+}
+
+.contact-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.8fr;
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+.contact-card {
+
+  padding: 46px;
+
+  border-radius: 34px;
+
+  background:
+    rgba(255,255,255,0.84);
+
+  border:
+    1px solid rgba(8,36,95,0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(8,36,95,0.06);
+}
+
+.contact-card h3 {
+
+  font-size: 1.6rem;
+
+  margin-bottom: 28px;
+
+  color: var(--blue-dark);
+}
+
+.contact-card p {
+
+  margin-bottom: 24px;
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+
+  color: var(--muted);
+}
+
+.contact-card strong {
+  color: var(--blue-dark);
+}
+
+.contact-card a {
+
+  color: #5d78ff;
+
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
     @media (max-width: 760px) {
 
       .nav,
@@ -1131,7 +1214,76 @@
       </div>
 
     </section>
+</section>
 
+<section id="contato" class="contact-section">
+
+  <div class="contact-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        Contato
+      </div>
+
+      <h2 class="section-title">
+        Fale com a Etika.
+      </h2>
+
+      <p class="section-text">
+        Canal direto para relacionamento comercial, representantes, médicos prescritores e e-commerce.
+      </p>
+
+    </div>
+
+    <div class="contact-card">
+
+      <h3>Etika Farma LTDA</h3>
+
+      <p>
+        <strong>CNPJ:</strong><br>
+        45.782.206/0001-59
+      </p>
+
+      <p>
+        <strong>Endereço:</strong><br>
+        Rua Aprígio Veloso, 334 Loja 04<br>
+        Universitário<br>
+        Campina Grande - PB<br>
+        CEP 58429-170
+      </p>
+
+      <p>
+        <strong>Email:</strong><br>
+
+        <a href="mailto:comercial@etikafarma.com.br">
+          comercial@etikafarma.com.br
+        </a>
+
+      </p>
+
+      <p>
+        <strong>E-Commerce:</strong><br>
+
+        <a
+          href="https://wa.me/5581988761500"
+          target="_blank"
+        >
+          +55 (81) 98876-1500
+        </a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+</body>
+</html>
   </main>
 
 </body>
