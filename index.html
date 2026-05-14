@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Etika Farma</title>
-  <meta name="description" content="Etika Farma — tecnologia, ciência e evolução aplicadas à saúde." />
+
+  <meta
+    name="description"
+    content="Etika Farma — tecnologia, ciência e evolução aplicadas à saúde."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
+
     :root {
       --blue-dark: #061b55;
       --blue-soft: #2f8cff;
@@ -49,12 +58,17 @@
       width: 100%;
       height: 96px;
       z-index: 50;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 0 4vw;
-      background: rgba(255, 255, 255, 0.9);
+
+      background: rgba(255,255,255,0.9);
+
       backdrop-filter: blur(18px);
+
       border-bottom: 1px solid rgba(6, 27, 85, 0.08);
     }
 
@@ -68,6 +82,7 @@
       display: flex;
       align-items: center;
       gap: 38px;
+
       font-size: 0.88rem;
       font-weight: 700;
       letter-spacing: 0.035em;
@@ -80,12 +95,20 @@
 
     .nav a::after {
       content: "";
+
       position: absolute;
       left: 0;
       bottom: -8px;
+
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--blue-soft), var(--purple));
+
+      background: linear-gradient(
+        90deg,
+        var(--blue-soft),
+        var(--purple)
+      );
+
       transition: width .25s ease;
     }
 
@@ -97,94 +120,181 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       height: 52px;
+
       padding: 0 26px;
+
       border: 1px solid rgba(8, 36, 95, 0.55);
+
       border-radius: 999px;
+
       font-weight: 800;
       font-size: 0.88rem;
       letter-spacing: 0.035em;
       text-transform: uppercase;
-      background: rgba(255, 255, 255, 0.58);
-      box-shadow: 0 14px 40px rgba(8, 36, 95, 0.08);
+
+      background: rgba(255,255,255,0.58);
+
+      box-shadow:
+        0 14px 40px rgba(8, 36, 95, 0.08);
     }
 
     .hero {
       min-height: 100vh;
+
       position: relative;
+
       padding-top: 96px;
+
       overflow: hidden;
+
       background:
-        radial-gradient(circle at 80% 42%, rgba(47, 140, 255, 0.25), transparent 28%),
-        radial-gradient(circle at 68% 58%, rgba(182, 76, 255, 0.18), transparent 24%),
-        linear-gradient(105deg, #ffffff 0%, #f6fbff 43%, #dceeff 100%);
+        radial-gradient(
+          circle at 80% 42%,
+          rgba(47,140,255,0.25),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 68% 58%,
+          rgba(182,76,255,0.18),
+          transparent 24%
+        ),
+
+        linear-gradient(
+          105deg,
+          #ffffff 0%,
+          #f6fbff 43%,
+          #dceeff 100%
+        );
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
+
       inset: 96px 0 0 0;
+
       background-image: url("assets/hero-etika.png");
+
       background-size: cover;
       background-position: center right;
+
       z-index: 0;
     }
 
     .hero::after {
       content: "";
+
       position: absolute;
+
       inset: 96px 0 0 0;
+
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.88) 26%, rgba(255,255,255,0.35) 54%, rgba(255,255,255,0.04) 100%),
-        linear-gradient(0deg, rgba(247,251,255,0.92) 0%, rgba(247,251,255,0.05) 28%, rgba(247,251,255,0) 100%);
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.98) 0%,
+          rgba(255,255,255,0.88) 26%,
+          rgba(255,255,255,0.35) 54%,
+          rgba(255,255,255,0.04) 100%
+        ),
+
+        linear-gradient(
+          0deg,
+          rgba(247,251,255,0.92) 0%,
+          rgba(247,251,255,0.05) 28%,
+          rgba(247,251,255,0) 100%
+        );
+
       z-index: 1;
+
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 3;
+
       min-height: calc(100vh - 96px);
+
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       max-width: 620px;
-      padding: 6vh 0 8vh 5.4vw;
+
+      padding:
+        6vh 0
+        8vh 5.4vw;
     }
 
     h1 {
       font-size: clamp(2rem, 4vw, 4.2rem);
+
       line-height: 1.08;
+
       letter-spacing: -0.055em;
+
       font-weight: 800;
+
       max-width: 620px;
+
       padding-top: 12px;
     }
 
     .gradient-word {
-      background: linear-gradient(90deg, #168dff 0%, #5d78ff 45%, #c743e8 100%);
+      background:
+        linear-gradient(
+          90deg,
+          #168dff 0%,
+          #5d78ff 45%,
+          #c743e8 100%
+        );
+
       -webkit-background-clip: text;
       background-clip: text;
+
       color: transparent;
+
       display: inline-block;
+
       padding-right: 10px;
+
       font-weight: 800;
     }
 
     .accent-line {
       width: 76px;
       height: 4px;
-      margin: 36px 0 28px;
+
+      margin:
+        36px 0
+        28px;
+
       border-radius: 999px;
-      background: linear-gradient(90deg, #168dff, #c743e8);
+
+      background:
+        linear-gradient(
+          90deg,
+          #168dff,
+          #c743e8
+        );
     }
 
     .subtitle {
       max-width: 540px;
-      font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+
+      font-size:
+        clamp(1.05rem, 1.35vw, 1.25rem);
+
       line-height: 1.65;
+
       color: #52627f;
+
       font-weight: 500;
+
       margin-bottom: 42px;
     }
 
@@ -192,33 +302,46 @@
       display: flex;
       align-items: center;
       gap: 18px;
+
       flex-wrap: wrap;
     }
 
     .btn {
       min-width: 214px;
       height: 62px;
+
       border-radius: 14px;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       gap: 14px;
+
       font-size: 0.9rem;
       font-weight: 800;
       letter-spacing: 0.035em;
       text-transform: uppercase;
-      transition: transform .25s ease;
+
+      transition:
+        transform .25s ease;
     }
 
     .btn-primary {
       color: white;
+
       background: var(--blue-dark);
-      box-shadow: 0 20px 45px rgba(6, 27, 85, 0.22);
+
+      box-shadow:
+        0 20px 45px rgba(6, 27, 85, 0.22);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(8, 36, 95, 0.45);
-      background: rgba(255, 255, 255, 0.58);
+      border:
+        1px solid rgba(8, 36, 95, 0.45);
+
+      background:
+        rgba(255,255,255,0.58);
     }
 
     .btn:hover {
@@ -228,13 +351,18 @@
     .scroll-hint {
       position: absolute;
       z-index: 4;
+
       left: 50%;
       bottom: 34px;
+
       transform: translateX(-50%);
+
       display: flex;
       flex-direction: column;
       align-items: center;
+
       gap: 10px;
+
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.055em;
@@ -244,70 +372,112 @@
     .mouse {
       width: 28px;
       height: 46px;
-      border: 2px solid rgba(8, 36, 95, 0.7);
+
+      border:
+        2px solid rgba(8, 36, 95, 0.7);
+
       border-radius: 999px;
+
       position: relative;
     }
 
     .mouse::before {
       content: "";
+
       position: absolute;
+
       left: 50%;
       top: 8px;
+
       transform: translateX(-50%);
+
       width: 4px;
       height: 8px;
+
       border-radius: 999px;
+
       background: var(--blue-soft);
-      animation: wheel 1.55s ease-in-out infinite;
+
+      animation:
+        wheel 1.55s ease-in-out infinite;
     }
 
     @keyframes wheel {
-      0% { opacity: 0; transform: translate(-50%, 0); }
-      35% { opacity: 1; }
-      100% { opacity: 0; transform: translate(-50%, 14px); }
-    }
 
-    .mobile-menu {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: white;
-      color: var(--blue-dark);
-      font-size: 1.4rem;
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+      }
+
+      35% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 14px);
+      }
     }
 
     section.placeholder {
       min-height: 70vh;
-      padding: 140px 5.4vw;
+
+      padding:
+        140px 5.4vw;
+
       background: white;
-      border-top: 1px solid rgba(8, 36, 95, 0.08);
+
+      border-top:
+        1px solid rgba(8, 36, 95, 0.08);
     }
 
     .about-section {
       position: relative;
+
       overflow: hidden;
+
       background:
-        radial-gradient(circle at 90% 20%, rgba(22, 212, 228, 0.08), transparent 18%),
-        radial-gradient(circle at 75% 70%, rgba(182, 76, 255, 0.08), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(22,212,228,0.08),
+          transparent 18%
+        ),
+
+        radial-gradient(
+          circle at 75% 70%,
+          rgba(182,76,255,0.08),
+          transparent 22%
+        ),
+
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f8fbff 100%
+        );
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.15fr;
+
+      grid-template-columns:
+        1fr 1.15fr;
+
       gap: 80px;
+
       align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
+
       gap: 12px;
+
       margin-bottom: 26px;
+
       color: #7790b9;
+
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.095em;
@@ -316,131 +486,161 @@
 
     .eyebrow::before {
       content: "";
+
       width: 72px;
       height: 3px;
-      background: linear-gradient(90deg, var(--blue-soft), var(--purple));
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue-soft),
+          var(--purple)
+        );
+
       border-radius: 999px;
     }
 
     .section-title {
-      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-size:
+        clamp(2rem, 3.5vw, 3.5rem);
+
       line-height: 1.08;
+
       letter-spacing: -0.055em;
+
       font-weight: 800;
+
       max-width: 680px;
     }
 
     .section-text {
       margin-top: 28px;
+
       max-width: 720px;
+
       font-size: 1.15rem;
+
       line-height: 1.8;
+
       color: var(--muted);
     }
 
     .about-text {
       margin-top: 34px;
+
       max-width: 620px;
+
       font-size: 1.12rem;
+
       line-height: 1.85;
     }
 
     .about-cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 26px;
     }
 
     .about-card {
-      padding: 38px 32px;
+      padding: 42px;
+
       border-radius: 34px;
-      min-height: 300px;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid rgba(8, 36, 95, 0.08);
+
+      background:
+        rgba(255,255,255,0.78);
+
+      border:
+        1px solid rgba(8, 36, 95, 0.08);
+
       backdrop-filter: blur(18px);
+
       box-shadow:
-        0 18px 60px rgba(8, 36, 95, 0.06),
-        inset 0 1px 0 rgba(255,255,255,0.65);
+        0 20px 60px rgba(8, 36, 95, 0.06);
+
       transition:
         transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+        border-color .25s ease;
     }
 
     .about-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(47, 140, 255, 0.22);
-      box-shadow:
-        0 24px 70px rgba(8, 36, 95, 0.09),
-        inset 0 1px 0 rgba(255,255,255,0.75);
+
+      border-color:
+        rgba(47,140,255,0.22);
     }
 
     .icon-circle {
-      width: 72px;
-      height: 72px;
+      width: 92px;
+      height: 92px;
+
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(91,120,255,0.10), rgba(199,67,232,0.10));
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+
       margin-bottom: 28px;
-      border: 1px solid rgba(91,120,255,0.12);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(91,120,255,0.08),
+          rgba(199,67,232,0.08)
+        );
+
+      border:
+        1px solid rgba(91,120,255,0.12);
+
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.7),
         0 10px 30px rgba(91,120,255,0.08);
     }
 
+    .icon-circle svg {
+      width: 40px;
+      height: 40px;
+
+      fill: none;
+
+      stroke: #6b7cff;
+
+      stroke-width: 2.4;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .card-label {
       display: inline-block;
+
       margin-bottom: 16px;
+
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+
       color: #5d78ff;
     }
 
     .about-card p {
       font-size: 1rem;
+
       line-height: 1.75;
+
       color: var(--blue-dark);
+
       font-weight: 600;
     }
 
     @media (max-width: 1120px) {
+
       .nav,
       .header-cta {
         display: none;
-      }
-
-      .mobile-menu {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .site-header {
-        height: 82px;
-      }
-
-      .brand img {
-        height: 48px;
-      }
-
-      .hero {
-        padding-top: 82px;
-      }
-
-      .hero::before,
-      .hero::after {
-        inset: 82px 0 0 0;
-      }
-
-      .hero-content {
-        min-height: calc(100vh - 82px);
-        padding-left: 6vw;
-        padding-right: 6vw;
       }
 
       .about-grid {
@@ -453,15 +653,10 @@
     }
 
     @media (max-width: 760px) {
+
       .hero::before {
         background-position: 64% center;
         opacity: 0.7;
-      }
-
-      .hero::after {
-        background:
-          linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.9) 58%, rgba(255,255,255,0.55) 100%),
-          linear-gradient(0deg, rgba(247,251,255,0.96) 0%, rgba(247,251,255,0.12) 34%, rgba(247,251,255,0) 100%);
       }
 
       .hero-content {
@@ -470,7 +665,8 @@
       }
 
       h1 {
-        font-size: clamp(2.35rem, 11vw, 4rem);
+        font-size:
+          clamp(2.35rem, 11vw, 4rem);
       }
 
       .subtitle {
@@ -486,36 +682,61 @@
         display: none;
       }
     }
+
   </style>
 </head>
 
 <body>
+
   <header class="site-header">
-    <a href="#home" class="brand" aria-label="Etika Farma">
-      <img src="assets/logo-etika.webp" alt="Etika Farma" />
+
+    <a href="#home" class="brand">
+      <img
+        src="assets/logo-etika.webp"
+        alt="Etika Farma"
+      />
     </a>
 
-    <nav class="nav" aria-label="Menu principal">
+    <nav class="nav">
+
       <a href="#sobre">Sobre a Etika</a>
+
       <a href="#produtos">Produtos</a>
+
       <a href="#educacao">Educação Médica</a>
+
       <a href="#distribuicao">Distribuição</a>
+
       <a href="#contato">Contato</a>
+
     </nav>
 
-    <a class="header-cta" href="https://wa.me/5585986572179" target="_blank" rel="noopener">
+    <a
+      class="header-cta"
+      href="https://wa.me/5585986572179"
+      target="_blank"
+    >
       Fale conosco
     </a>
 
-    <button class="mobile-menu" aria-label="Abrir menu">☰</button>
   </header>
 
   <main>
+
     <section id="home" class="hero">
+
       <div class="hero-content">
+
         <h1>
           Tecnologia,<br>
-          ciência e <span class="gradient-word">evolução</span><br>
+
+          ciência e
+          <span class="gradient-word">
+            evolução
+          </span>
+
+          <br>
+
           aplicadas à saúde.
         </h1>
 
@@ -526,21 +747,49 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#sobre" class="btn btn-primary">Conheça a Etika →</a>
-          <a href="#produtos" class="btn btn-secondary">Linha de produtos →</a>
+
+          <a
+            href="#sobre"
+            class="btn btn-primary"
+          >
+            Conheça a Etika →
+          </a>
+
+          <a
+            href="#produtos"
+            class="btn btn-secondary"
+          >
+            Linha de produtos →
+          </a>
+
         </div>
+
       </div>
 
-      <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint">
+
         <span class="mouse"></span>
-        <span>Role para explorar</span>
+
+        <span>
+          Role para explorar
+        </span>
+
       </div>
+
     </section>
 
-    <section id="sobre" class="placeholder about-section">
+    <section
+      id="sobre"
+      class="placeholder about-section"
+    >
+
       <div class="about-grid">
+
         <div class="about-left">
-          <div class="eyebrow">Sobre a Etika Farma</div>
+
+          <div class="eyebrow">
+            Sobre a Etika Farma
+          </div>
 
           <h2 class="section-title">
             Uma estrutura ágil para uma nova etapa da saúde.
@@ -549,63 +798,106 @@
           <p class="section-text about-text">
             A Etika Farma atua no desenvolvimento, fabricação e distribuição de soluções em saúde, conectando produtos, relacionamento médico e educação continuada com presença estratégica no Brasil.
           </p>
+
         </div>
 
         <div class="about-cards">
+
           <div class="about-card">
-            <div class="icon-circle">🎯</div>
-            <span class="card-label">Missão</span>
+
+            <div class="icon-circle">
+
+              <svg viewBox="0 0 64 64">
+
+                <circle
+                  cx="30"
+                  cy="34"
+                  r="18"
+                ></circle>
+
+                <circle
+                  cx="30"
+                  cy="34"
+                  r="10"
+                ></circle>
+
+                <path d="M30 34 L48 16"></path>
+
+                <path d="M44 16 H52 V24"></path>
+
+              </svg>
+
+            </div>
+
+            <span class="card-label">
+              Missão
+            </span>
+
             <p>
               Levar soluções seguras e bem desenvolvidas à rotina de médicos e pacientes.
             </p>
+
           </div>
 
           <div class="about-card">
-            <div class="icon-circle">🔭</div>
-            <span class="card-label">Visão</span>
+
+            <div class="icon-circle">
+
+              <svg viewBox="0 0 64 64">
+
+                <path d="M18 28 L44 18 L48 28 L22 38 Z"></path>
+
+                <path d="M28 36 L24 52"></path>
+
+                <path d="M36 34 L44 52"></path>
+
+                <path d="M20 52 H48"></path>
+
+              </svg>
+
+            </div>
+
+            <span class="card-label">
+              Visão
+            </span>
+
             <p>
               Ser reconhecida pela capacidade de unir inovação, qualidade e proximidade com o prescritor.
             </p>
+
           </div>
 
           <div class="about-card">
-            <div class="icon-circle">🤝</div>
-            <span class="card-label">Valores</span>
+
+            <div class="icon-circle">
+
+              <svg viewBox="0 0 64 64">
+
+                <path d="M32 8 L50 16 V30 C50 43 41 52 32 56 C23 52 14 43 14 30 V16 Z"></path>
+
+                <path d="M23 32 L30 39 L43 25"></path>
+
+              </svg>
+
+            </div>
+
+            <span class="card-label">
+              Valores
+            </span>
+
             <p>
               Ética. Clareza. Qualidade. Compromisso. Evolução.
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="produtos" class="placeholder">
-      <h2 class="section-title">Linha de produtos.</h2>
-      <p class="section-text">
-        Área reservada para os produtos Etika Farma: Tricslis, Calmater, Revita LP, ReCart, CaOsso, Mag3B6 e Mionir.
-      </p>
-    </section>
-
-    <section id="educacao" class="placeholder">
-      <h2 class="section-title">Educação médica continuada.</h2>
-      <p class="section-text">
-        A Etika Farma apoia a atualização dos profissionais médicos por meio de congressos, cursos presenciais, formações online e iniciativas de desenvolvimento técnico-científico.
-      </p>
-    </section>
-
-    <section id="distribuicao" class="placeholder">
-      <h2 class="section-title">Distribuição com presença estratégica.</h2>
-      <p class="section-text">
-        Atuação nas regiões Norte, Nordeste, Minas, Rio e interior de São Paulo, com 10 centros de distribuição e mais de 2 mil entregas por mês.
-      </p>
-    </section>
-
-    <section id="contato" class="placeholder">
-      <h2 class="section-title">Fale com a Etika Farma.</h2>
-      <p class="section-text">
-        Canal direto para representantes, médicos prescritores e parceiros comerciais.
-      </p>
-    </section>
   </main>
+
 </body>
 </html>
