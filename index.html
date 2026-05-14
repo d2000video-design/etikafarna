@@ -187,12 +187,12 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 4.2rem);
-      line-height: 1.08;
+      font-size: clamp(3.1rem, 6.2vw, 6.7rem);
+      line-height: 0.98;
       letter-spacing: -0.075em;
       font-weight: 900;
       color: var(--blue-dark);
-     max-width: 620px;
+      max-width: 760px;
       text-wrap: balance;
     }
 
@@ -202,8 +202,6 @@
       background-clip: text;
       color: transparent;
       letter-spacing: -0.085em;
-      display: inline-block;
-padding-right: 10px;
     }
 
     .accent-line {
@@ -215,7 +213,7 @@ padding-right: 10px;
     }
 
     .subtitle {
-     max-width: 520px;
+      max-width: 620px;
       font-size: clamp(1.05rem, 1.5vw, 1.45rem);
       line-height: 1.65;
       color: #52627f;
@@ -318,9 +316,70 @@ padding-right: 10px;
 
     section.placeholder {
       min-height: 70vh;
-      padding: 120px 5.4vw;
+      padding: 140px 5.4vw;
       background: white;
       border-top: 1px solid rgba(8, 36, 95, 0.08);
+    }
+
+    .about-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(22, 212, 228, 0.08), transparent 18%),
+        radial-gradient(circle at 75% 70%, rgba(182, 76, 255, 0.08), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text {
+      margin-top: 34px;
+      max-width: 620px;
+      font-size: 1.18rem;
+      line-height: 1.9;
+    }
+
+    .about-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .about-card {
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(8, 36, 95, 0.08);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 60px rgba(8, 36, 95, 0.06);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(47, 140, 255, 0.22);
+    }
+
+    .card-label {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5d78ff;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--blue-dark);
+      font-weight: 600;
     }
 
     .section-title {
@@ -372,6 +431,12 @@ padding-right: 10px;
         padding-left: 6vw;
         padding-right: 6vw;
         max-width: 720px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .about-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -462,11 +527,43 @@ padding-right: 10px;
       </div>
     </section>
 
-    <section id="sobre" class="placeholder">
-      <h2 class="section-title">Uma presença que conecta saúde, ciência e confiança.</h2>
-      <p class="section-text">
-        A Etika Farma desenvolve, fabrica e distribui soluções voltadas à saúde, com atuação próxima dos profissionais prescritores e foco em qualidade, atualização e relacionamento médico.
-      </p>
+    <section id="sobre" class="placeholder about-section">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="eyebrow">Sobre a Etika Farma</div>
+
+          <h2 class="section-title">
+            Ciência, inovação e precisão aplicadas à evolução da saúde.
+          </h2>
+
+          <p class="section-text about-text">
+            A Etika Farma une desenvolvimento, distribuição e relacionamento médico em uma estrutura moderna, ágil e orientada pela evolução científica.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <span class="card-label">Missão</span>
+            <p>
+              Desenvolver soluções com eficiência, segurança e qualidade.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <span class="card-label">Visão</span>
+            <p>
+              Construir uma presença de referência em inovação e relacionamento médico.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <span class="card-label">Valores</span>
+            <p>
+              Ética. Precisão. Evolução. Transparência.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="produtos" class="placeholder">
